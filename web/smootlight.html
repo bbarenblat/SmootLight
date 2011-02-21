@@ -2,11 +2,28 @@
 <head>
 <title>SmootLight</title>
 <script type='text/javascript' src='js/smootCanvas.js'></script>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.5.min.js'></script>
+<script type='text/javascript' src='js/control.js'></script>
+
+<style type='text/css'>
+  .invisible {
+    display: none;
+  }
+</style>
 </head>
 
 <body>
   <canvas id='canvas' style='margin: 50px 25px;' width='800px' height='500px'></canvas>
   <div id='connection'></div>
   <div id='framerate'></div>
+
+  <div id='control'>
+    <form id='preferences' action='#'>
+      <select id='behaviors'>
+	<option>Loading behaviors&hellip;</option>
+      </select>
+      <input id='refreshBehaviorListButton' type='button' value='Refresh behavior list' onclick='refreshBehaviorList()' class='invisible' />
+    </form>
+  </div>
 </body>
 </html>
